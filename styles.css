@@ -1,0 +1,320 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(90deg, #3b5998, #8b9dc3); /* Gradient for cover photo */
+    color: white;
+}
+
+
+.cover-photo img {
+    width: 100%; /* Ensure image covers full width */
+    height: 600px; ; /* Make sure the image fills the space */
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: center; /* Keeps the image centered */
+}
+
+/* Profile Section */
+.profile-section {  
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: -60px; /* Slightly overlap with the cover photo */
+    z-index: 1; /* Ensure profile section stays above the background */
+    margin-bottom: 10px; /* Space between profile section and other content */
+}
+
+.profile-photo-container {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px; /* Space between profile photo and name/friends text */
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-info h1 {
+    margin: 0;
+    color: #333;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Profile Buttons Section */
+.profile-buttons {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: flex-end; /* Align buttons to the right */
+    gap: 10px;
+    position: absolute;
+    top: 40px; /* Distance from top of the cover photo */
+    right: 20px; /* Align to the right corner */
+}
+
+.profile-buttons button {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effects */
+.profile-buttons button:hover {
+    background-color: #4c70ba;
+}
+
+.add-story-btn {
+    width: 100px; /* Adjust width as needed */
+}
+
+.edit-profile-btn {
+    width: 100px; /* Adjust width as needed */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3b5998;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3b5998;
+    color: white;
+}
+
+/* Layout */
+.main-content {
+    display: flex;
+    padding: 20px;
+    background-color: #f0f2f5; /* Subtle gray for main area */
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    color: #3b5998;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Posts Section */
+.posts {
+    flex: 2;
+    padding: 20px;
+}
+
+.posts h2 {
+    color: #3b5998;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post p {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.post span {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Photo Gallery Section */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.photo-gallery figure {
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.photo-gallery figure:hover {
+    transform: scale(1.05);
+}
+
+.photo-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.photo-gallery figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3b5998;
+    color: white;
+    font-size: 14px;
+}
+/* Navigation Link Active Styling */
+nav a.active {
+    background-color: #3b5998;
+    color: white;
+}
+/* About Section Styling */
+.about-section {
+    text-align: justify;
+    line-height: 1.6; /* Optional: improve readability by increasing line spacing */
+    color: #333; /* Optional: enhance the text color for better visibility */
+}
+/* Style for the story message */
+.story-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #24499851; /* Facebook-like blue */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears on top */
+    animation: fadeInOut 5s ease-in-out;
+}
+
+/* Optional animation for fading effect */
+@keyframes fadeInOut {
+    0%, 80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* Blink Animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+/* Video Gallery Section */
+.video-gallery {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.video-gallery h2 {
+    color: #3b5998;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.video-container video:hover {
+    transform: scale(1.05);
+}
